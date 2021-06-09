@@ -36,13 +36,13 @@ class SudachipyTokenizer:
                 >>> def custom_formatter(x):
                 >>>     # Use normalized_form() except for conjugated_words
                 >>>     conjugation = ['動詞', '形容詞', '形容動詞', '助動詞']
-                >>> tokens = []
-                >>> for m in x:
-                >>>     if m.part_of_speech()[0] in conjugation:
-                >>>>         tokens.append(m.surface())
-                >>>     else:
-                >>>         tokens.append(m.normalized_form())
-                >>> return tokens
+                >>>     tokens = []
+                >>>     for m in x:
+                >>>         if m.part_of_speech()[0] in conjugation:
+                >>>             tokens.append(m.surface())
+                >>>         else:
+                >>>             tokens.append(m.normalized_form())
+                >>>     return tokens
         """
         self.config_path = config_path
         self.resource_dir = resource_dir
