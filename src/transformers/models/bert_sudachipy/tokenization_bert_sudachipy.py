@@ -199,7 +199,7 @@ class SudachipyTokenizer:
                 raise ValueError("Invalid `word_form` is specified.")
 
         self.sudachi_dict = dictionary.Dictionary(config_path=config_path, resource_dir=resource_dir, dict_type=dict_type)
-        self.sudachi = self.qsudachi_dict.create()
+        self.sudachi = self.sudachi_dict.create()
 
     def tokenize(self, text, **kwargs):
         return self.formatter(self.sudachi.tokenize(text, self.split_mode))
